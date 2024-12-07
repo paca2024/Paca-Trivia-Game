@@ -4,13 +4,14 @@ A fun and interactive cryptocurrency trivia game built with HTML, CSS, and JavaS
 
 ## Features
 
-- 20 random questions per game from a pool of 50+ crypto-related questions
+- 60 random questions per game from a pool of 100+ crypto-related questions
 - 15-second timer per question
 - Score system with time bonus
 - 5 lives system
 - Beautiful animations and visual effects
 - Randomized answer positions
 - Modern glassmorphism UI design
+- Mobile-friendly interface
 
 ## How to Play
 
@@ -25,3 +26,4 @@ A fun and interactive cryptocurrency trivia game built with HTML, CSS, and JavaS
 - HTML5
 - CSS3 (with modern animations)
 - Vanilla JavaScript
+- Mobile-responsive design

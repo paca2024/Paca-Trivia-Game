@@ -11,7 +11,7 @@ const gameState = {
 };
 
 // Constants
-const QUESTIONS_PER_GAME = 20; // Number of questions per game
+const QUESTIONS_PER_GAME = 60; // Number of questions per game
 
 // Sample questions (100 questions covering various crypto topics)
 const questions = [
@@ -654,23 +654,27 @@ function resetGame() {
 
 // Celebration Functions
 function createConfetti() {
+    const container = document.getElementById('celebration-container');
+    container.innerHTML = ''; // Clear any existing confetti
+
     const colors = ['#6c5ce7', '#00b894', '#00cec9', '#0984e3', '#6c5ce7'];
     const confettiCount = 50;
-    const container = document.getElementById('celebration-container');
-    
+
     for (let i = 0; i < confettiCount; i++) {
         const confetti = document.createElement('div');
         confetti.className = 'confetti';
         confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
         confetti.style.left = Math.random() * 100 + 'vw';
-        confetti.style.animation = `confetti-fall ${1 + Math.random() * 2}s linear forwards`;
+        confetti.style.animationDuration = (Math.random() * 3 + 2) + 's';
+        confetti.style.opacity = '1';
+        confetti.style.animation = 'confetti-fall ' + (Math.random() * 3 + 2) + 's linear forwards';
         container.appendChild(confetti);
-        
-        // Remove confetti after animation
-        setTimeout(() => {
-            confetti.remove();
-        }, 3000);
     }
+
+    // Clean up confetti after animation
+    setTimeout(() => {
+        container.innerHTML = '';
+    }, 5000);
 }
 
 function showWelcomeMessage() {
