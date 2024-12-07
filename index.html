@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Paca Trivia Game</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -13,12 +13,12 @@
         <div class="orb"></div>
     </div>
     <div class="game-container">
-        <div id="celebration-container"></div>
         <div id="home-screen" class="screen active">
             <h1>Paca Trivia Game</h1>
             <p class="welcome-text">Let's test your crypto knowledge!</p>
-            <button id="start-btn" class="primary-btn">Start Game</button>
-            <button id="leaderboard-btn" class="secondary-btn">Leaderboard</button>
+            <div class="buttons-container">
+                <button id="start-btn" class="primary-btn">Start Game</button>
+            </div>
         </div>
 
         <div id="game-screen" class="screen">
@@ -27,18 +27,16 @@
                     <div class="timer-bar"></div>
                     <span class="time-left">15</span>
                 </div>
-                <div id="lives">Lives: <span>5</span>❤️</div>
                 <div id="score">Score: <span>0</span></div>
-                <div id="question-counter">Question: <span>1</span>/50</div>
+                <div id="lives">Lives: <span>5</span></div>
+                <div id="question-counter">Q: <span>1/20</span></div>
             </div>
-
             <div id="question-container">
                 <h2 id="question"></h2>
                 <div class="answers-grid">
                     <button class="answer-btn" data-index="0"></button>
                     <button class="answer-btn" data-index="1"></button>
                     <button class="answer-btn" data-index="2"></button>
-                    <button class="answer-btn" data-index="3"></button>
                 </div>
             </div>
         </div>
@@ -53,7 +51,9 @@
                 </div>
                 <p class="screenshot-message">Take a screenshot of your results! 📸</p>
             </div>
-            <button id="play-again-btn" class="primary-btn">Play Again</button>
+            <div class="buttons-container">
+                <button id="play-again-btn" class="primary-btn">Play Again</button>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
